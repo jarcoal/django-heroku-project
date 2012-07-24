@@ -1,0 +1,34 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html id="{% block page_id %}{% endblock %}" class="{% block page_type %}{% endblock %}" xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
+    <head>
+    	{% block head %}{% endblock %}
+    
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="{% block meta_desc %}{% endblock %}" />
+                        
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+        <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" />
+
+		{% if not DEBUG %}		
+		{% endif %}
+    </head>
+    
+    <body>
+    	{% block body %}
+ 		{% endblock %}
+ 		
+    	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    	<script type="text/javascript" src="{% static 'js/logic.js' %}"></script>
+		
+		{% block scripts %}{% endblock %}
+		
+    	<script type="text/javascript">
+    		$(function(){
+    			{% block onload %}
+    			
+    			{% endblock %}
+    		});
+    	</script>    	
+    </body>
+</html>
