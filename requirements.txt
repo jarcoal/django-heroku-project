@@ -1,7 +1,7 @@
-Django==1.4
+Django==1.4.1
 MySQL-python==1.2.3
 Pillow==1.7.7
-South==0.7.5
+South==0.7.6
 boto==2.5.2
 dj-database-url==0.2.1
 django-debug-toolbar==0.9.4
@@ -10,9 +10,10 @@ django-secure==0.1.2
 django-ses==0.4.1
 django-storages==1.1.5
 django-tastypie==0.9.11
-gunicorn==0.14.5
+gunicorn==0.14.6
 mimeparse==0.1.3
 psycopg2==2.4.5
-python-dateutil==1.5
-requests==0.13.3
+python-dateutil==2.1
+requests==0.13.9
+six==1.1.0
 wsgiref==0.1.2
