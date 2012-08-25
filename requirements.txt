@@ -4,7 +4,9 @@ Pillow==1.7.7
 South==0.7.6
 boto==2.5.2
 dj-database-url==0.2.1
+django-crispy-forms==1.1.4
 django-debug-toolbar==0.9.4
+django-email-as-username==1.5.1
 django-imagekit==2.0.1
 django-secure==0.1.2
 django-ses==0.4.1
