@@ -1,4 +1,6 @@
 import os
+from django.core.urlresolvers import reverse_lazy
+
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
 if 'PRODUCTION' in os.environ:
@@ -17,8 +19,8 @@ EMAIL_BACKEND = 'django_ses.SESBackend'
 
 #Auth
 #AUTH_PROFILE_MODULE = ''
-#LOGIN_URL = ''
-#LOGOUT_URL = ''
+#LOGIN_URL = reverse_lazy('')
+#LOGOUT_URL = reverse_lazy('')
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
