@@ -26,6 +26,10 @@ EMAIL_BACKEND = 'django_ses.SESBackend'
 AUTHENTICATION_BACKENDS = ('emailusernames.backends.EmailAuthBackend',)
 
 
+#TastyPie - object limit (0=unlimited)
+API_LIMIT_PER_PAGE = 0
+
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
