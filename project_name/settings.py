@@ -22,6 +22,10 @@ EMAIL_BACKEND = 'django_ses.SESBackend'
 #LOGIN_URL = reverse_lazy('')
 #LOGOUT_URL = reverse_lazy('')
 
+#email as username backend
+AUTHENTICATION_BACKENDS = ('emailusernames.backends.EmailAuthBackend',)
+
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -119,6 +123,8 @@ INSTALLED_APPS = (
 	'south',
 	'debug_toolbar',
 	#'djangosecure',
+
+	'emailusernames',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
