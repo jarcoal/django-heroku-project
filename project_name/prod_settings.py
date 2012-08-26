@@ -14,6 +14,7 @@ DEBUG = TEMPLATE_DEBUG = False
 
 #PREPEND_WWW = True
 
+MEDIA_ROOT = MEDIA_URL = ''
 
 #S3
 DEFAULT_FILE_STORAGE = STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'

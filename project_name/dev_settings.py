@@ -12,6 +12,9 @@ AWS_ACCESS_KEY_ID = ''
 AWS_SECRET_ACCESS_KEY = ''
 AWS_STORAGE_BUCKET_NAME = ''
 
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'static/media/')
+MEDIA_URL = '/static/media/'
+
 DEBUG_TOOLBAR_CONFIG = { 'INTERCEPT_REDIRECTS': False, }
 
 DATABASES = {
