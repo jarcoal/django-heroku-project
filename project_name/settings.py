@@ -30,6 +30,10 @@ AUTHENTICATION_BACKENDS = ('emailusernames.backends.EmailAuthBackend',)
 API_LIMIT_PER_PAGE = 0
 
 
+#imagekit - optimistic backend for s3/cdn
+IMAGEKIT_DEFAULT_IMAGE_CACHE_BACKEND = 'imagekit.imagecache.NonValidatingImageCacheBackend'
+
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
