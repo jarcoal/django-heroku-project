@@ -145,23 +145,53 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+
     'filters': {
         'require_debug_false': {
             '()': 'django.utils.log.RequireDebugFalse'
         }
     },
+
+	'formatters': {
+		'simple': {
+			'format': '[%(asctime)s - %(levelname)s] %(message)s',
+		},
+
+		'json': {
+			'()': '{{ project_name }}.log.JsonFormatter',
+			'fmt': ('created', 'levelname', 'levelno', 'msg', 'pathname', 'lineno', 'funcName', 'user'),
+		},
+	},
+
     'handlers': {
+		'null': {
+			'level':'DEBUG',
+			'class':'django.utils.log.NullHandler',
+		},
+
+		'console': {
+			'level': 'DEBUG',
+			'formatter': 'json',
+			'class': 'logging.StreamHandler',
+		},
+
         'mail_admins': {
-            'level': 'ERROR',
+            'level': 'WARNING',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
         }
     },
+
     'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
+        '': {
+            'handlers': ['console', 'mail_admins'],
+            'level': 'DEBUG',
         },
+
+        'django.db.backends': {
+        	'handlers': ['null'],
+        	'level': 'DEBUG',
+        	'propagate': False,
+        }
     }
 }
