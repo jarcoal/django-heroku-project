@@ -107,14 +107,6 @@ WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 TEMPLATE_DIRS = (os.path.join(PROJECT_PATH, 'templates'),)
 
 INSTALLED_APPS = (
-	'gunicorn',
-	'storages',
-	'imagekit',
-	'south',
-	'debug_toolbar',
-	'emailusernames',
-	#'djangosecure',
-
 	'django.contrib.auth',
 	'django.contrib.contenttypes',
 	'django.contrib.sessions',
@@ -123,6 +115,14 @@ INSTALLED_APPS = (
 	'django.contrib.staticfiles',
 	'django.contrib.admin',
 	'django.contrib.admindocs',
+	
+	'gunicorn',
+	'storages',
+	'imagekit',
+	'south',
+	'debug_toolbar',
+	'emailusernames',
+	#'djangosecure',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
