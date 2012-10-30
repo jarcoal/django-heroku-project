@@ -1,5 +1,5 @@
 Django==1.4.2
-MySQL-python==1.2.3
+MySQL-python==1.2.4b5
 Pillow==1.7.7
 South==0.7.6
 boto==2.6.0
@@ -11,6 +11,7 @@ django-email-as-username==1.6.2
 django-imagekit==2.0.2
 django-secure==0.1.2
 django-ses==0.4.1
+-e git+git@github.com:jarcoal/django-sliver.git@e82501a3358c8a59fcd5dd07b85b210d7acb60ee#egg=django_sliver-dev
 django-storages==1.1.5
 gunicorn==0.15.0
 mimeparse==0.1.3
