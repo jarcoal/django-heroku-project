@@ -5,15 +5,7 @@ from django.views.generic.simple import direct_to_template
 from django.contrib import admin
 admin.autodiscover()
 
-#api
-from tastypie.api import Api as API
-
-v1 = API(api_name='v1')
-#v1.register()
-
-urlpatterns = patterns('',
-	url('^api/', include(v1.urls)),
-	
+urlpatterns = patterns('',	
 	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 	url(r'^admin/', include(admin.site.urls)),
 	

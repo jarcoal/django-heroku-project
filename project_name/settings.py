@@ -25,11 +25,6 @@ EMAIL_BACKEND = 'django_ses.SESBackend'
 #email as username backend
 AUTHENTICATION_BACKENDS = ('emailusernames.backends.EmailAuthBackend',)
 
-
-#TastyPie - object limit (0=unlimited)
-API_LIMIT_PER_PAGE = 0
-
-
 #imagekit - optimistic backend for s3/cdn
 IMAGEKIT_DEFAULT_IMAGE_CACHE_BACKEND = 'imagekit.imagecache.NonValidatingImageCacheBackend'
 
